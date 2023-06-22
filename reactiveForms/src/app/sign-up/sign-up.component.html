@@ -1,0 +1,26 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="mb-1 px-3">
+        <label class="form-label">First Name</label>
+        <input type="text" formControlName="nameF" class="form-control" placeholder="name">
+    </div>
+    <div class="mb-1 px-3">
+        <label class="form-label">Last Name</label>
+        <input type="text" formControlName="nameL" class="form-control" placeholder="name">
+    </div>
+    <div class="mb-1 px-3">
+        <label class="form-label">Email address</label>
+        <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+    </div>
+    <div class="mb-1 px-3">
+        <label class="form-label">New Password</label>
+        <input type="password" formControlName="passwordn" class="form-control" placeholder="enter your password here">
+    </div>
+    <div class="mb-1 px-3">
+        <label class="form-label">Re-Enter Password</label>
+        <input type="password" formControlName="passwordr" class="form-control" placeholder="enter your password here">
+    </div>
+    <div class="mt-3 px-5">
+        <button class="btn btn-primary" type="submit" [disabled]="myForm.invalid" 
+        [ngClass]="myForm.invalid ? 'btn-danger' : 'btn-success'" >Signin</button>
+    </div>
+</form>
